@@ -1,4 +1,4 @@
 #!/bin/sh
 mkdir -p /data/.openclaw
 chown -R node:node /data
-exec su node -c "docker-entrypoint.sh $*"
+exec su node -c "node dist/index.js gateway --bind lan --port 8080"
